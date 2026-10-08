@@ -1,7 +1,5 @@
 # Smart Restaurant Management System 🍔🍕
 
-![Restaurant Banner](images/home-img-2.png)
-
 A comprehensive, full-stack Smart Restaurant Management System built with modern UI principles. This project allows users to browse menus, add items to their cart, securely check out, and even reserve a table online. It also features a fully-functional admin dashboard to manage products, orders, and reservations.
 
 ## 🚀 Features
