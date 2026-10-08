@@ -1,5 +1,7 @@
 # Smart Restaurant Management System 🍔🍕
 
+![Restaurant Banner](images/home-img-1.png)
+
 A comprehensive, full-stack Smart Restaurant Management System built with modern UI principles. This project allows users to browse menus, add items to their cart, securely check out, and even reserve a table online. It also features a fully-functional admin dashboard to manage products, orders, and reservations.
 
 ## 🚀 Features
@@ -16,6 +18,41 @@ A comprehensive, full-stack Smart Restaurant Management System built with modern
 - **Backend**: PHP 8, PDO (Prepared Statements).
 - **Database**: MySQL / MariaDB.
 - **Environment**: XAMPP (Apache).
+
+## 📊 Database Architecture (ER Diagram)
+Here is the core structure of the relational database powering the system:
+
+```mermaid
+erDiagram
+    USERS ||--o{ ORDERS : places
+    USERS ||--o{ CART : adds_to
+    USERS ||--o{ RESERVATIONS : books
+    PRODUCTS ||--o{ CART : contained_in
+    
+    USERS {
+        int id PK
+        string name
+        string email
+        string password "BCRYPT"
+    }
+    PRODUCTS {
+        int id PK
+        string name
+        string category
+        int price
+    }
+    ORDERS {
+        int id PK
+        string payment_status
+        string address
+    }
+    RESERVATIONS {
+        int id PK
+        date date
+        time time
+        int guests
+    }
+```
 
 ## 🛠️ Installation & Setup
 
